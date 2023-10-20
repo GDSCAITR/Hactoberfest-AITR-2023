@@ -34,13 +34,36 @@ public:
                     dummy = head;
                 }
             }
+             if(l1->next == NULL){
+                v1 = 0;
+            }
+            if(l2->next == NULL){
+                v2 = 0;
+            }
             
+            v3 = (v1 + v2 + carry);
+            carry = v3 / 10;
+            int insert_value = v3 % 10;
+            
+            ListNode *newNode = new ListNode(insert_value);
             if(l1->next != NULL){
                 l1 = l1->next;
             }
             if(l2->next != NULL){
                 l2 = l2->next;
             }
+             if(l1->next == NULL){
+                v1 = 0;
+            }
+            if(l2->next == NULL){
+                v2 = 0;
+            }
+            
+            v3 = (v1 + v2 + carry);
+            carry = v3 / 10;
+            int insert_value = v3 % 10;
+            
+            ListNode *newNode = new ListNode(insert_value);
         }
         return dummy;
     }
